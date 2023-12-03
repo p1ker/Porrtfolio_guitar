@@ -1,0 +1,380 @@
+@import "normalizez.scss"
+@import "resets.scss"
+
+* 
+    box-sizing: border-box
+
+@font-face 
+    font-family: "MontserratT" 
+    src: url('../font/Montserrat-Regular.ttf')
+    font-weight: regular
+    font-style: normal
+
+@font-face 
+    font-family: "MontserratT" 
+    src: url('../font/Montserrat-SemiBold.ttf')
+    font-weight: bold
+    font-style: normal
+
+html
+    font-family: "MontserratT"
+
+$color-orange: #F28B64
+$color-blue: #5290EA
+$color-grey: #E2E2E2
+
+.container
+    width: 1140px
+    margin: 0 auto
+
+/* Первая секция */
+.main-section
+    position: relative
+    background-color: #e6e6e6
+    min-height: 800px
+    padding-top: 16px
+    &__nav-container
+        display: flex
+        flex-direction: row
+        height: 69px
+        justify-content: space-between
+        align-items: center
+    &__logo
+        width: 134px
+    &__content-container
+        display: flex
+        flex-direction: row
+        align-item: center
+        position: relative
+        overflow: hidden
+    &__first-elipse
+        position: absolute
+        top: 129px
+        right: 68px
+    &__second-elipse
+        position: absolute
+        right: -75px
+        top: 537px
+
+/* Навигационное меню */
+.nav-menu
+    &__list
+        display: flex
+        flex-direction: row 
+        font-weight: bold
+    &__list-item
+        margin-right: 64px
+        font-size: 18px
+        &:last-child
+            margin-right: 0px 
+    a
+        text-decoration: none
+        color: black
+
+/* Левая часть первой секции */
+.left-wrapper
+    position: relative
+    &__img
+        position: relative
+        width: 883px
+        height: 709px
+        z-index: 5
+    &__rectangle-blue
+        position: absolute
+        top: 159px
+        left: -50px
+        width: 565.949px
+        height: 220px
+        border-radius: 100px
+        background: $color-blue
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25)
+        transform: rotate(-64deg)
+        z-index: 2
+    &__rectangle-orange
+        position: absolute
+        top: 169px
+        left: -30px
+        width: 618.43px
+        height: 220px
+        border-radius: 100px
+        background: $color-orange
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25)
+        transform: rotate(-50.81deg)
+        z-index: 3
+    &__rectangle-grey
+        position: absolute
+        top: 198px
+        left: 11px
+        width: 608.968px
+        height: 220px
+        border-radius: 100px
+        background: $color-grey
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25)
+        transform: rotate(-36.15deg)
+        z-index: 1
+
+/* Правая часть первой секции */
+.right-wrapper
+    width: 372px
+    height: 235px
+    position: absolute
+    top: 150px
+    right: 76px
+    z-index: 4
+    &__icon-box
+        margin-bottom: 1px
+        padding-left: 10px
+    &__text
+        font-size: 16px
+        margin-bottom: 20px
+    &__title
+        margin-bottom: 5px
+
+/* Иконки */
+.icons
+    display: inline-flex
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border: 1px solid $color-blue
+        border-radius: 100px
+        margin-right: 17px
+        &:last-child
+            margin-right: 0px
+        i
+            font-size: 21px
+
+/* Представление */
+.title
+    font-size: 72px
+    position: relative
+    font-weight: bold
+    &__hr
+        width: 65px
+        position: absolute
+        bottom: 0px
+        margin: 0
+        border: none
+        border-top: 1px solid black
+
+/* Кнопка */
+.buttons
+    display: inline-flex
+    &__main-btn
+        margin-right: 32px
+        font-size: 18px
+        color: white
+        width: 200px
+        height: 60px
+        border-radius: 100px
+        background: $color-orange
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        border: none
+        font-weight: bold
+    &__icon-btn
+        display: inline-flex
+        align-items: center
+        img
+            margin-right: 12px
+            width: 46px
+    &__text
+        font-size: 16px  
+        
+
+/* Маленький декоративный кружок */
+.elipse
+    width: 194px
+    height: 194px
+    background: linear-gradient(144deg, rgba(237, 123, 80, 0.50) 14.85%, rgba(72, 138, 234, 0.50) 53.25%, rgba(44, 44, 44, 0.50) 85.74%)
+    border-radius: 150px
+    display: flex
+    align-items: center
+    justify-content: center
+    /* Большой декоративный кружок, сделанный через модификатор(технология БЭМ) */
+    &_big 
+        width: 282px
+        height: 282px
+    &__subtract
+        background-color: #e6e6e6
+        width: 129.33px
+        height: 129.33px
+        border-radius: 150px
+        &_big
+            width: 188px
+            height: 188px
+
+/* Вторая секция */
+.second-section
+    background-color: #e6e6e6
+    min-height: 700px
+    width: 100%
+    &__container
+        position: relative
+    &__title
+        padding-top: 32px
+        margin-bottom: 40px
+        
+    &__card-item
+       /*  margin-right: 30px
+        &:last-child
+            margin-right: 0px */
+    &__cards
+        display: flex
+        justify-content: space-between
+        margin-bottom: 25px
+        z-index: 5
+    &__stat 
+        display: flex
+        justify-content: space-between
+        width: 1035px
+        height: 99px
+        margin: 0 auto
+    &__first-elipse
+        position: absolute
+        top: 51px
+        right: -46px
+        transform: rotate(41.35deg)
+    &__second-elipse
+        position: absolute
+        bottom: 87px
+        left: -77px
+
+/* Карточки контейнер */
+.card-item
+    position: relative
+    width: 360px
+    min-height: 360px
+    display: inline-flex
+    justify-content: space-between
+    border: none
+    border-radius: 10px
+    align-items: end
+    box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.25)
+    z-index: 1
+    &_first
+        background-color: $color-grey
+        
+    &__guitar
+        width: 197px
+        height: 335px
+    &__text
+        align-self: center 
+        font-size: 36px
+        writing-mode: vertical-rl
+        text-align: center
+        padding-right: 50px
+        font-weight: bold
+    &_second
+        background-color: $color-orange
+        
+    &_third
+        background-color: $color-blue
+
+/* Статистика */
+.stat-item
+    display: inline-flex
+    align-items: center
+    width: fix-content
+    &__icon
+        width: 80px
+        height: 80px    
+        margin-right: 20px   
+    &__title
+        font-size: 48px
+        font-weight: bold 
+    &__text
+        font-size: 18px
+
+/* Третья секция */
+    
+.third-section
+    background-color: #e6e6e6
+    &__container
+        position: relative
+        display: flex
+        flex-direction: row
+        min-height: 640px
+        overflow: hidden
+        z-index: 1
+    &__left-wrapper
+        width: 50%
+        position: relative
+    &__first-elipse
+        position: absolute
+        bottom:209px
+        left: 159px
+    &__right-wrapper
+        width: 50%
+    &__second-elipse
+        position: absolute
+        top: -156px
+        right: -114px
+    &__img
+        position: absolute
+        width: 230px
+        bottom: 163px
+        left: 99px
+        z-index: 1
+
+/* Левая часть 3 секции */
+.left_title
+    position: relative
+    display: flex 
+    justify-content: flex-end 
+    align-items: center 
+    padding-right: 7px
+    z-index: 2
+    &__title
+        font-size: 72px
+        
+/* Правая часть 3 секции */
+.wrapper-description
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-left: 81px
+    &__title
+        position: relative
+        font-size: 72px
+        margin-bottom: 20px
+        z-index: 1
+    &__text
+        font-size: 18px
+        /* min-width: 479px */
+        margin-bottom: 30px
+        padding-right: 50px
+
+.title__hr_top
+    bottom: 70px
+
+/* Футер */    
+.footer
+    background-color:  #e6e6e6
+    margin: 0
+    max-height: 272px
+    &__container
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+    &__grif-wrapper
+        width: 50%
+    &__contacts
+        display: flex
+        align-items: center
+    
+
+.grif-wrapper
+    &__grif
+        width: 80%
+        height: 100%
+
+.contacts
+    width: 55%
+    padding-bottom: 42px
+    &__title
+        font-size: 72px
+        margin-bottom: 20px
